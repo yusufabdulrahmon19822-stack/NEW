@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Yusuf Creative helps small businesses communicate clearly online through landing pages, graphic design and AI-powered UGC advertising.">
+<title>Yusuf Creative — Creative Design for Growing Brands</title>
+<style>
+:root{
+  --black:#070707;
+  --dark:#101010;
+  --white:#f7f7f5;
+  --muted:#aaa;
+  --orange:#ff7a00;
+  --line:rgba(255,255,255,.10);
+  --card:rgba(255,255,255,.045);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,Arial,sans-serif;background:var(--black);color:var(--white);
+  line-height:1.6;overflow-x:hidden
+}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+header{
+  position:sticky;top:0;z-index:20;background:rgba(7,7,7,.82);
+  backdrop-filter:blur(16px);border-bottom:1px solid var(--line)
+}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:1.1rem;font-weight:900;letter-spacing:-.5px}
+.logo span{color:var(--orange)}
+nav{display:none;gap:26px;color:#ccc;font-size:.9rem}
+nav a:hover{color:var(--orange)}
+.hero{padding:92px 0 80px;position:relative}
+.hero:before{
+  content:"";position:absolute;width:340px;height:340px;background:var(--orange);
+  filter:blur(150px);opacity:.13;right:-180px;top:30px
+}
+.eyebrow{color:var(--orange);font-size:.8rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px}
+h1{font-size:clamp(2.7rem,8vw,5.7rem);line-height:.98;letter-spacing:-4px;max-width:900px}
+h1 span{color:var(--orange)}
+.hero p{max-width:680px;color:#bbb;font-size:1.05rem;margin:26px 0 30px}
+.buttons{display:flex;flex-wrap:wrap;gap:12px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;padding:14px 20px;
+  border-radius:9px;font-weight:800;font-size:.9rem;border:1px solid #333;transition:.25s
+}
+.btn.primary{background:var(--orange);border-color:var(--orange);color:#111}
+.btn.secondary{background:transparent}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+section{padding:82px 0}
+.section-tag{color:var(--orange);font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:.72rem}
+h2{font-size:clamp(2rem,5vw,3.5rem);line-height:1.05;letter-spacing:-2px;margin:10px 0 16px}
+.lead{color:#aaa;max-width:650px}
+.problem-grid,.offer-grid,.benefit-grid{display:grid;gap:16px;margin-top:34px}
+.problem-card,.offer-card,.benefit{
+  background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px
+}
+.problem-card h3,.offer-card h3{margin-bottom:8px}
+.problem-card p,.offer-card p,.benefit p{color:#aaa;font-size:.94rem}
+.offer-card{min-height:220px}
+.number{font-size:.75rem;color:var(--orange);font-weight:900;margin-bottom:45px}
+.benefit strong{display:block;margin-bottom:5px}
+.portfolio{background:#0b0b0b}
+.portfolio-grid{display:grid;gap:18px;margin-top:35px}
+.project{border:1px solid var(--line);background:#111;border-radius:18px;overflow:hidden}
+.project img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover}
+.project-info{padding:20px}
+.project-info small{color:var(--orange);font-weight:800;text-transform:uppercase;letter-spacing:1px}
+.project-info h3{margin:5px 0 6px;font-size:1.25rem}
+.project-info p{color:#aaa;font-size:.9rem;margin-bottom:15px}
+.link{color:var(--orange);font-weight:800;font-size:.9rem}
+.about-grid{display:grid;gap:28px;align-items:center}
+.about-photo{
+  min-height:430px;border-radius:22px;border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;background:#111;
+  color:#777;text-align:center;padding:0;overflow:hidden
+}
+.about-photo img{width:100%;height:100%;min-height:430px;object-fit:cover;display:block}
+.about-photo strong{display:block;color:#ddd;margin-bottom:8px}
+.about-copy p{color:#aaa;margin:14px 0}
+.steps{display:grid;gap:12px;margin-top:32px}
+.step{display:grid;grid-template-columns:55px 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+.step b{color:var(--orange)}
+.faq{margin-top:30px;border-top:1px solid var(--line)}
+details{border-bottom:1px solid var(--line);padding:20px 0}
+summary{cursor:pointer;font-weight:800}
+details p{color:#aaa;padding-top:12px;max-width:700px}
+.cta{
+  margin-top:30px;padding:50px 26px;border-radius:24px;
+  background:linear-gradient(135deg,#171717,#0d0d0d);border:1px solid var(--line)
+}
+.service-buttons{display:flex;flex-wrap:wrap;gap:10px;margin-top:25px}
+footer{border-top:1px solid var(--line);padding:28px 0;color:#777;font-size:.82rem}
+@media(min-width:700px){
+  nav{display:flex}
+  .problem-grid{grid-template-columns:repeat(3,1fr)}
+  .offer-grid{grid-template-columns:repeat(3,1fr)}
+  .benefit-grid{grid-template-columns:repeat(5,1fr)}
+  .portfolio-grid{grid-template-columns:repeat(2,1fr)}
+  .portfolio-grid .project:last-child{grid-column:1/-1}
+  .about-grid{grid-template-columns:.9fr 1.1fr}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="logo" href="#">Yusuf<span>Creative</span>.</a>
+    <nav>
+      <a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn primary" href="#contact">Let's Talk</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container">
+    <div class="eyebrow">Creative Design • Digital Presence • AI Content</div>
+    <h1>Your Business Deserves to Be <span>Seen, Understood & Remembered.</span></h1>
+    <p>Your business can be great and still struggle to get attention when its online presence doesn't communicate its value clearly. I help small businesses turn their ideas into professional landing pages, compelling visual designs and AI-powered UGC ads.</p>
+    <div class="buttons">
+      <a class="btn primary" href="#contact">Start a Project</a>
+      <a class="btn secondary" href="#work">See My Work</a>
+    </div>
+  </div>
+</section>
+
+<section>
+<div class="container">
+  <div class="section-tag">The Problem</div>
+  <h2>Sometimes, you don't need a better business. You need a better way to communicate it.</h2>
+  <p class="lead">When customers don't immediately understand what you offer, attention can disappear before they ever take the next step.</p>
+  <div class="problem-grid">
+    <div class="problem-card"><h3>Hard to explain</h3><p>Customers don't immediately understand what your business offers or why it matters.</p></div>
+    <div class="problem-card"><h3>Hard to discover</h3><p>Your business may exist online without giving people a clear place to learn about it.</p></div>
+    <div class="problem-card"><h3>No clear next step</h3><p>People see your content but don't know what to do next.</p></div>
+  </div>
+</div>
+</section>
+
+<section id="services">
+<div class="container">
+  <div class="section-tag">What I Do</div>
+  <h2>Everything your brand needs to communicate better online.</h2>
+  <div class="offer-grid">
+    <div class="offer-card"><div class="number">01</div><h3>Landing Pages</h3><p>Focused, professional pages that explain your offer clearly and guide visitors toward taking action.</p></div>
+    <div class="offer-card"><div class="number">02</div><h3>Graphic Design</h3><p>Visuals that make your business look professional and communicate your message across social and marketing channels.</p></div>
+    <div class="offer-card"><div class="number">03</div><h3>AI UGC Advertising</h3><p>Attention-grabbing AI-powered ad concepts designed to showcase products and services in engaging ways.</p></div>
+  </div>
+</div>
+</section>
+
+<section>
+<div class="container">
+  <div class="section-tag">The Result</div>
+  <h2>Make it easier for people to understand your business.</h2>
+  <div class="benefit-grid">
+    <div class="benefit"><strong>Be easier to find</strong><p>Give customers a clear digital destination.</p></div>
+    <div class="benefit"><strong>Communicate your value</strong><p>Make the message easier to understand.</p></div>
+    <div class="benefit"><strong>Look professional</strong><p>Create a stronger first impression.</p></div>
+    <div class="benefit"><strong>Get attention</strong><p>Use visuals and content built to stand out.</p></div>
+    <div class="benefit"><strong>Guide action</strong><p>Give visitors a clear next step.</p></div>
+  </div>
+</div>
+</section>
+
+<section id="work" class="portfolio">
+<div class="container">
+  <div class="section-tag">Selected Work</div>
+  <h2>Don't just take my word for it. See the work.</h2>
+  <p class="lead">A selection of landing pages and visual designs created to communicate offers clearly and present brands professionally.</p>
+  <div class="portfolio-grid">
+    <article class="project">
+      <img src="assets/swiftlink.jpg" alt="SWIFTLINK logistics landing page">
+      <div class="project-info"><small>Web Design</small><h3>SWIFTLINK</h3><p>Logistics and delivery landing page designed to explain the service and guide visitors toward requesting a quote.</p><a class="link" href="https://yusufabdulrahmon19822-stack.github.io/SWIFTLINK/" target="_blank">View Website →</a></div>
+    </article>
+    <article class="project">
+      <img src="assets/train-with-abby.jpg" alt="Train With Abby fitness landing page">
+      <div class="project-info"><small>Web Design</small><h3>Train With Abby</h3><p>Fitness coaching landing page built to communicate the offer, benefits and journey toward getting started.</p><a class="link" href="https://yusufabdulrahmon19822-stack.github.io/Train-with-Abby/" target="_blank">View Website →</a></div>
+    </article>
+    <article class="project">
+      <img src="assets/nike-ad.jpg" alt="Nike footwear advertising design">
+      <div class="project-info"><small>Graphic Design</small><h3>Nike Product Ad</h3><p>Bold footwear promotional design focused on product presentation and a direct call to action.</p></div>
+    </article>
+    <article class="project">
+      <img src="assets/jbl-ad.jpg" alt="JBL headphone advertising design">
+      <div class="project-info"><small>Graphic Design</small><h3>JBL Product Ad</h3><p>Dark product-focused advertising visual built around the headphones and key product messaging.</p></div>
+    </article>
+    <article class="project">
+      <img src="assets/birthday-design.jpg" alt="Birthday social media design">
+      <div class="project-info"><small>Graphic Design</small><h3>Birthday Design</h3><p>Personal celebration design combining portrait photography, bold typography and event details.</p></div>
+    </article>
+  </div>
+</div>
+</section>
+
+<section id="about">
+<div class="container">
+  <div class="section-tag">About</div>
+  <div class="about-grid">
+    <div class="about-photo">
+      <img src="assets/yusuf-photo.png" alt="Yusuf Abdulrahmon — Yusuf Creative">
+    </div>
+    <div class="about-copy">
+      <h2>Meet Yusuf — The Creative Behind Yusuf Creative.</h2>
+      <p>I'm Yusuf Abdulrahmon, founder of Yusuf Creative. I help businesses turn their ideas into clear, professional and engaging digital experiences.</p>
+      <p>Through landing pages, graphic design and AI-powered UGC advertising, I help brands communicate what they offer, present themselves professionally and create content that gets attention.</p>
+      <p>For me, good design isn't just about making something look good. It's about making the message clear, building trust and helping the audience know what to do next.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+<div class="container">
+  <div class="section-tag">How It Works</div>
+  <h2>From idea to finished creative.</h2>
+  <div class="steps">
+    <div class="step"><b>01</b><div><strong>Tell me what you need</strong><p class="lead">Share your idea, business or project.</p></div></div>
+    <div class="step"><b>02</b><div><strong>We discuss the project</strong><p class="lead">We clarify the goal, audience and deliverables.</p></div></div>
+    <div class="step"><b>03</b><div><strong>I create</strong><p class="lead">Your design, landing page or AI content is developed.</p></div></div>
+    <div class="step"><b>04</b><div><strong>Review & refine</strong><p class="lead">You review the work and request agreed revisions.</p></div></div>
+    <div class="step"><b>05</b><div><strong>Get your final work</strong><p class="lead">The finished creative is delivered ready for use.</p></div></div>
+  </div>
+</div>
+</section>
+
+<section id="faq">
+<div class="container">
+  <div class="section-tag">FAQ</div>
+  <h2>Questions before we start?</h2>
+  <div class="faq">
+    <details><summary>Do you offer revisions?</summary><p>Yes. We agree on the revision process for your project, and you can review the work and request necessary changes before final delivery.</p></details>
+    <details><summary>How long does a project take?</summary><p>It depends on the type and complexity of the project. I'll give you an estimated delivery time before we start.</p></details>
+    <details><summary>Can I request only one service?</summary><p>Yes. You can request a landing page, graphic design, AI UGC advert, or a combination of services.</p></details>
+    <details><summary>Do I need everything ready before contacting you?</summary><p>No. If you have an idea but aren't sure how to structure it, we can discuss what you need.</p></details>
+    <details><summary>Can you design for an existing business?</summary><p>Yes. The work can be created for an existing brand, product, service or new business.</p></details>
+  </div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+  <div class="cta">
+    <div class="section-tag">Let's Work</div>
+    <h2>Ready to give your business a better online presence?</h2>
+    <p class="lead">Tell me what your business needs and let's discuss the right creative solution.</p>
+    <div class="service-buttons">
+      <!-- Replace YOUR_WHATSAPP_NUMBER with your WhatsApp number in international format, without + or spaces. -->
+      <a class="btn primary wa" data-message="Hi Yusuf, I'm interested in a Landing Page for my business. I'd like to discuss my project.">Landing Page</a>
+      <a class="btn secondary wa" data-message="Hi Yusuf, I'm interested in Graphic Design for my business. I'd like to discuss my project.">Graphic Design</a>
+      <a class="btn secondary wa" data-message="Hi Yusuf, I'm interested in an AI UGC Advert for my business. I'd like to discuss my project.">AI UGC Advert</a>
+      <a class="btn secondary wa" data-message="Hi Yusuf, I'm interested in all three services: Landing Page, Graphic Design and AI UGC Advertising. I'd like to discuss my business.">All Three</a>
+    </div>
+  </div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container">© 2026 Yusuf Creative. Built to communicate, not just decorate.</div>
+</footer>
+
+<script>
+const whatsappNumber = "YOUR_WHATSAPP_NUMBER";
+document.querySelectorAll(".wa").forEach(btn=>{
+  btn.href = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(btn.dataset.message);
+  btn.target = "_blank";
+});
+</script>
+</body>
+</html>
